@@ -35,11 +35,12 @@ public class OrderService {
 
         //Call Inventory service, and place order if product in stock.
         Boolean result = webClient.get()
-                .uri("http://localhost:8082/api/inventory").retrieve()
-                .bodyToMono(Boolean.class).
-                block();
+                .uri("http://localhost:8082/api/inventory")
+                .retrieve()
+                .bodyToMono(Boolean.class)
+                .block();
 
-        if (result) {
+        if (Boolean.TRUE.equals(result)) {
             oderRepository.save(order);
         } else {
             throw new IllegalArgumentException("Product is not in stock.");
@@ -47,7 +48,6 @@ public class OrderService {
     }
 
     private OrderLineItems mapToDto(OrderLineItemsDto orderLineItemsDto) {
-
         OrderLineItems orderLineItems = new OrderLineItems();
         orderLineItems.setQuantity(orderLineItemsDto.getQuantity());
         orderLineItems.setPrice(orderLineItemsDto.getPrice());
