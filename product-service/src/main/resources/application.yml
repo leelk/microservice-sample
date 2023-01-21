@@ -4,6 +4,10 @@ spring:
   data:
     mongodb:
       uri: mongodb://localhost:27017/product-service?createDatabaseIfNotExist=true
+
+server:
+  port: 8083
+
 eureka:
   client:
     serviceUrl:
