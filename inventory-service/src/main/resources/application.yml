@@ -10,7 +10,7 @@ spring:
     hibernate:
       ddl-auto: create-drop
 server:
-  port: 8082
+  port: 0
 
 eureka:
   client:
