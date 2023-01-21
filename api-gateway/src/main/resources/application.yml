@@ -1,7 +1,22 @@
 spring:
   application:
     name: api-gateway
+  cloud:
+    gateway:
+      routes[0]:
+        id: product-service
+        uri: lb://product-service
+        predicates[0]: Path=/api/product
 
+      routes[1]:
+        id: order-service
+        uri: lb://order-service
+        predicates[0]: Path=/api/order
+
+      routes[2]:
+        id: inventory-service
+        uri: lb://inventory-service
+        predicates[0]: Path=/api/inventory
 server:
   port: 8080
 
