@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da56b900-46e6-4801-9cc4-e6faa2ac1157" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" afterDir="false" />
-    </list>
+    <list default="true" id="da56b900-46e6-4801-9cc4-e6faa2ac1157" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -179,8 +176,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.ProductServiceApplication" />
-        <item itemvalue="Spring Boot.InventoryServiceApplication" />
         <item itemvalue="Spring Boot.OrderServiceApplication" />
+        <item itemvalue="Spring Boot.InventoryServiceApplication" />
         <item itemvalue="Spring Boot.DiscoveryServerApplication" />
       </list>
     </recent_temporary>
@@ -195,6 +192,7 @@
       <updated>1674215190363</updated>
       <workItem from="1674215191485" duration="9340000" />
       <workItem from="1674324779192" duration="4294000" />
+      <workItem from="1674583895475" duration="310000" />
     </task>
     <servers />
   </component>
