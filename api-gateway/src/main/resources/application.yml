@@ -23,6 +23,10 @@ spring:
         uri: http://localhost:8761
         predicates[0]: Path=/api/eureka/web
         filters[0]: SetPath=/
+      routes[4]:
+        id: discovery-service-static
+        uri: http://localhost:8761
+        predicates[0]: Path=/eureka/**
 server:
   port: 8080
 
