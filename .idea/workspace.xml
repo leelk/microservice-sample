@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da56b900-46e6-4801-9cc4-e6faa2ac1157" name="Changes" comment="" />
+    <list default="true" id="da56b900-46e6-4801-9cc4-e6faa2ac1157" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -94,19 +96,6 @@
     </option>
   </component>
   <component name="RunManager" selected="Spring Boot.ApiGatewayApplication">
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="microservice" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="microservice" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ApiGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="api-gateway" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="me.leel.apigateway.ApiGatewayApplication" />
@@ -192,7 +181,8 @@
       <updated>1674215190363</updated>
       <workItem from="1674215191485" duration="9340000" />
       <workItem from="1674324779192" duration="4294000" />
-      <workItem from="1674583895475" duration="310000" />
+      <workItem from="1674583895475" duration="588000" />
+      <workItem from="1674584532480" duration="789000" />
     </task>
     <servers />
   </component>
