@@ -13,11 +13,7 @@ import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Value("${eureka.username}")
-    @Value("${eureka.email}")
-
-
     private String userName;
-
     @Value("${eureka.password}")
     private String password;
 
