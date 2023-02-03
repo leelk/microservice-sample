@@ -1,5 +1,6 @@
 package me.leel.orderservice.controller;
 
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import lombok.RequiredArgsConstructor;
 import me.leel.orderservice.dto.OrderRequest;
 import me.leel.orderservice.service.OrderService;
@@ -15,9 +16,14 @@ public class OrderController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
+    @CircuitBreaker(name = "inventory", fallbackMethod = "fallBackMethod")
     public String placeOrder(@RequestBody OrderRequest orderRequest) {
         orderService.placeOrder(orderRequest);
         return "Order Placed Successfully.";
+    }
+
+    private String fallBackMethod(OrderRequest orderRequest, RuntimeException e){
+        return "Oops.. Something went wrong. Please place order after some times..";
     }
 }
 
