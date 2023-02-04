@@ -21,7 +21,6 @@ public class OrderController {
         orderService.placeOrder(orderRequest);
         return "Order Placed Successfully.";
     }
-dbmnshbsnbjnsjbhe
     private String fallBackMethod(OrderRequest orderRequest, RuntimeException e){
         return "Oops.. Something went wrong. Please place order after some times..";
     }
