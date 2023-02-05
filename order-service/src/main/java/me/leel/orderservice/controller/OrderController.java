@@ -25,7 +25,6 @@ public class OrderController {
     private String fallBackMethod(OrderRequest orderRequest, RuntimeException e){
         System.out.println("This is calling..");
         return "Oops.. Something went wrong. Please place order after some times..";
-
     }
 }
 
