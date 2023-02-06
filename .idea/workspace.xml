@@ -171,8 +171,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.InventoryServiceApplication" />
         <item itemvalue="Spring Boot.OrderServiceApplication" />
+        <item itemvalue="Spring Boot.InventoryServiceApplication" />
         <item itemvalue="Spring Boot.ProductServiceApplication" />
         <item itemvalue="Spring Boot.DiscoveryServerApplication" />
       </list>
