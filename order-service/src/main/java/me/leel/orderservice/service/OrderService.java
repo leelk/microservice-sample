@@ -4,9 +4,11 @@ import lombok.RequiredArgsConstructor;
 import me.leel.orderservice.dto.InventoryResponse;
 import me.leel.orderservice.dto.OrderLineItemsDto;
 import me.leel.orderservice.dto.OrderRequest;
+import me.leel.orderservice.event.OrderPlacedEvent;
 import me.leel.orderservice.model.Order;
 import me.leel.orderservice.model.OrderLineItems;
 import me.leel.orderservice.repository.OderRepository;
+import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.reactive.function.client.WebClient;
@@ -23,6 +25,7 @@ public class OrderService {
 
     private final OderRepository oderRepository;
     private final WebClient.Builder webClientBuilder;
+    private final KafkaTemplate kafkaTemplate;
 
     public String placeOrder(OrderRequest orderRequest) {
         Order order = new Order();
@@ -40,7 +43,7 @@ public class OrderService {
                 .collect(Collectors.toList());
 
         //TODO Call Inventory service, and place order if product in stock.
-        InventoryResponse [] inventoryResponses = webClientBuilder.build().get()
+        InventoryResponse[] inventoryResponses = webClientBuilder.build().get()
                 .uri("http://inventory-service/api/inventory",
                         uriBuilder -> uriBuilder.queryParam("skuCode").build(skuCodeList))
                 .retrieve()
@@ -51,6 +54,7 @@ public class OrderService {
 
         if (Boolean.TRUE.equals(allProductInStock)) {
             oderRepository.save(order);
+            kafkaTemplate.send("notificationTopic", new OrderPlacedEvent(order.getOrderNumber()));
             return "Order Placed Successfully..";
         } else {
             throw new IllegalArgumentException("Product is not in stock.");
