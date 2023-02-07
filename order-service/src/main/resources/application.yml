@@ -67,4 +67,4 @@ resilience4j:
     instances:
       inventory:
         max-attempts: 3
-        wait-duration: 5s
+        wait-duration: 4s
