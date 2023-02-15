@@ -1,7 +1,7 @@
 eureka:
   instance:
     hostname: localhost
-  client:
+  client:geagaegaegegg
     register-with-eureka: false
     fetch-registry: false
   username: ${USERNAME:user}
