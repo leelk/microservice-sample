@@ -21,6 +21,7 @@
         <module>discovery-service</module>
         <module>api-gateway</module>
         <module>notification-service</module>
+        <module>auth-service</module>
     </modules>
 
     <properties>
